@@ -119,7 +119,7 @@
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image2"}}</data></shadow></value></block></statement></block><block type="variables_set" id="a|QzDpyq~a3$$NMFc0NC" disabled="true" x="210" y="310"><field name="VAR" id="o,P3bCp#L1Yc1wq|eLOj">princesa</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="(9DZJ6Cv$]U8=eI`75@O" disabled="true"><value name="img"><shadow type="screen_image_picker" id="VFM7+/AJ;g,4+yduPxpm" disabled="true"><field name="img">img`
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image2"}}</data></shadow></value><next><block type="variables_set" id="a|QzDpyq~a3$$NMFc0NC"><field name="VAR" id="o,P3bCp#L1Yc1wq|eLOj">princesa</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="(9DZJ6Cv$]U8=eI`75@O"><value name="img"><shadow type="screen_image_picker" id="VFM7+/AJ;g,4+yduPxpm"><field name="img">img`
 . . . . . . f f f f 4 4 f . . . 
 . . . . f f b f 5 4 5 5 4 f . . 
 . . . f b 3 3 e 4 5 5 5 5 f . . 
@@ -136,4 +136,4 @@
 . . . . f b e e b d b d b f . . 
 . . . . f f d 1 d 1 d 1 f f . . 
 . . . . . . f f b b f f . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="6?#J~G0Ekl*B_Ax7ey1U" disabled="true"><field name="MEMBER">Player</field></shadow></value></block></value></block></xml>
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="6?#J~G0Ekl*B_Ax7ey1U"><field name="MEMBER">Player</field></shadow></value></block></value></block></next></block></statement></block></xml>
