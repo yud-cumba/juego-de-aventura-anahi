@@ -23,6 +23,9 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f b b f f f . . . . . 
         `)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
+    game.over(true)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     princesa.setImage(img`
         . . . . . . f f f f 4 4 f . . . 
