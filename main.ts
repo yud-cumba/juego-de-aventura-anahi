@@ -1,3 +1,8 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (princesa.isHittingTile(CollisionDirection.Left)) {
+        princesa.vy = -150
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     princesa.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -181,3 +186,5 @@ princesa = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(princesa, 100, 0)
 tiles.setTilemap(tilemap`level1`)
+scene.cameraFollowSprite(princesa)
+princesa.ay = 300
