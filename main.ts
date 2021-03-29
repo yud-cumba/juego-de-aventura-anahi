@@ -1,6 +1,13 @@
 function setLevelTileMap () {
+    let level = 0
     cleargame()
-    if (true) {
+    if (level == 1) {
+        tiles.setTilemap(tilemap`level5`)
+    } else if (level == 2) {
+    	
+    } else if (level == 3) {
+    	
+    } else if (level == 4) {
     	
     } else {
     	
