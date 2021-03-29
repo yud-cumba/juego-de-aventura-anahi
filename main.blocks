@@ -136,4 +136,38 @@
 . . . . f b e e b d b d b f . . 
 . . . . f f d 1 d 1 d 1 f f . . 
 . . . . . . f f b b f f . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="6?#J~G0Ekl*B_Ax7ey1U"><field name="MEMBER">Player</field></shadow></value></block></value></block></next></block></statement></block></xml>
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="6?#J~G0Ekl*B_Ax7ey1U"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="az7z1OUdASn*LPD~O*O/"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="oa0tNXax;:YtPZ[g0;$_"><field name="VAR" id="o,P3bCp#L1Yc1wq|eLOj">princesa</field></block></value><value name="vx"><shadow type="math_number" id="lHIkgW=,.]0S=TYlQBw-"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number" id="~/3dZD8GiJ$#p.9q.:rg"><field name="NUM">0</field></shadow></value></block></next></block></next></block></statement></block><block type="keyonevent" id="g8k,Q5Xkb%Bi,)h%LMt#" x="50" y="270"><field name="button">controller.left</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id="{X=es4_Sk`S{W%L{XRHQ"><value name="sprite"><block type="variables_get" id="n_@VvC+OC#z.+Qsd,e`:"><field name="VAR" id="o,P3bCp#L1Yc1wq|eLOj">princesa</field></block></value><value name="img"><shadow type="screen_image_picker" id="2?zf~iVtKdtGxi}f;,*9"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . f 4 4 f f f f . . . . . . 
+. . f 4 5 5 4 5 f b f f . . . . 
+. . f 5 5 5 5 4 e 3 3 b f . . . 
+. . f e 4 4 4 e 3 3 3 3 b f . . 
+. f 3 3 3 3 3 3 3 3 3 3 3 f . . 
+. f 3 3 e e 3 b e 3 3 3 3 f . . 
+. f 3 3 e e e f f 3 3 3 3 f . . 
+. . f e e e f b f b b b b f f . 
+. . . e 4 4 f 1 e b b b b b f . 
+. . . f 4 4 4 4 f b b b b b f . 
+. . . f d d d e 4 4 b b b f . . 
+. . . f d d d e 4 4 f f f . . . 
+. . f d d d b b e e b b f . . . 
+. . f b d 1 d 1 d d b f . . . . 
+. . . f f f b b f f f . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image3"}}</data></shadow></value></block></statement></block><block type="keyonevent" id="M2aXTyllf}jDCOq8w2MF" x="450" y="270"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetimage" id="%LQ/]4~igZv1}=^vvB5["><value name="sprite"><block type="variables_get" id="t6rmo*c,v2UM)RC}GtwI"><field name="VAR" id="o,P3bCp#L1Yc1wq|eLOj">princesa</field></block></value><value name="img"><shadow type="screen_image_picker" id="$`agYv^}-g/gYg^?yQD9"><field name="img">img`
+. . . . . . f f f f 4 4 f . . . 
+. . . . f f b f 5 4 5 5 4 f . . 
+. . . f b 3 3 e 4 5 5 5 5 f . . 
+. . f b 3 3 3 3 e 4 4 4 e f . . 
+. . f 3 3 3 3 3 3 3 3 3 3 f . . 
+. . f 3 3 3 3 e b 3 e e 3 3 f . 
+. . f 3 3 3 3 f f e e e 3 3 f . 
+. . f b b b b f b f e e e 3 f . 
+. . f b b b b e 1 f 4 4 e f . . 
+. f f b b b b f 4 4 4 4 f . . . 
+. f b b b b f f f e e e f . . . 
+. . f b b f 4 4 e d d d f . . . 
+. . . f f e 4 4 e d d d f . . . 
+. . . . f b e e b d b d b f . . 
+. . . . f f d 1 d 1 d 1 f f . . 
+. . . . . . f f b b f f . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image4"}}</data></shadow></value></block></statement></block></xml>
