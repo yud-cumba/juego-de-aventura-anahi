@@ -1,8 +1,19 @@
+function setLevelTileMap () {
+    cleargame()
+    if (true) {
+    	
+    } else {
+    	
+    }
+}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (princesa.isHittingTile(CollisionDirection.Bottom)) {
         princesa.vy = -150
     }
 })
+function cleargame () {
+	
+}
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     princesa.setImage(img`
         . . . . . . . . . . . . . . . . 
