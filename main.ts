@@ -1,5 +1,5 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (princesa.isHittingTile(CollisionDirection.Left)) {
+    if (princesa.isHittingTile(CollisionDirection.Bottom)) {
         princesa.vy = -150
     }
 })
