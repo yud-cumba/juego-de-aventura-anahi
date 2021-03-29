@@ -187,4 +187,12 @@ princesa = sprites.create(img`
 controller.moveSprite(princesa, 100, 0)
 tiles.setTilemap(tilemap`level1`)
 scene.cameraFollowSprite(princesa)
+princesa.setPosition(10, 0)
 princesa.ay = 300
+info.setLife(3)
+game.onUpdate(function () {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
+        princesa.setPosition(10, 0)
+        info.changeLifeBy(-1)
+    }
+})
