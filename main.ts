@@ -64,6 +64,10 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . f f b b f f . . . . 
         `)
 })
+function initializeLevel () {
+    effects.confetti.startScreenEffect()
+    princesa = tiles.getTilesByType(assets.tile`transparency16`)
+}
 let princesa: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
