@@ -2,7 +2,7 @@ function setLevelTileMap () {
     let level = 0
     cleargame()
     if (level == 1) {
-        tiles.setTilemap(tilemap`level5`)
+        tiles.setTilemap(tilemap`level14`)
     } else if (level == 2) {
     	
     } else if (level == 3) {
@@ -66,7 +66,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function initializeLevel () {
     effects.confetti.startScreenEffect()
-    princesa = tiles.getTilesByType(assets.tile`transparency16`)
 }
 let princesa: Sprite = null
 scene.setBackgroundImage(img`
@@ -216,8 +215,16 @@ princesa.setPosition(10, 0)
 princesa.ay = 300
 info.setLife(3)
 game.onUpdate(function () {
-    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile2`)) {
         princesa.setPosition(10, 0)
         info.changeLifeBy(-1)
+        music.jumpDown.play()
+    }
+})
+game.onUpdate(function () {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile9`)) {
+        princesa.setPosition(10, 0)
+        info.changeLifeBy(-1)
+        music.jumpDown.play()
     }
 })
