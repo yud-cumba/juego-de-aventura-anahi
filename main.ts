@@ -1,26 +1,8 @@
-function setLevelTileMap () {
-    let level = 0
-    cleargame()
-    if (level == 1) {
-        tiles.setTilemap(tilemap`level14`)
-    } else if (level == 2) {
-    	
-    } else if (level == 3) {
-    	
-    } else if (level == 4) {
-    	
-    } else {
-    	
-    }
-}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (princesa.isHittingTile(CollisionDirection.Bottom)) {
         princesa.vy = -150
     }
 })
-function cleargame () {
-	
-}
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     princesa.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -40,9 +22,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . f b d 1 d 1 d d b f . . . . 
         . . . f f f b b f f f . . . . . 
         `)
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
-    game.over(true)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     princesa.setImage(img`
@@ -64,8 +43,22 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . f f b b f f . . . . 
         `)
 })
-function initializeLevel () {
-    effects.confetti.startScreenEffect()
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
+    game.over(true)
+})
+function startLevel () {
+    let level = 0
+    if (level == 0) {
+    	
+    } else if (level == 1) {
+        tiles.setTilemap(tilemap`level14`)
+    } else if (level == 2) {
+    	
+    } else if (level == 3) {
+    	
+    } else if (level == 4) {
+        game.over(true)
+    }
 }
 let princesa: Sprite = null
 scene.setBackgroundImage(img`
@@ -209,11 +202,11 @@ princesa = sprites.create(img`
     . . . . . . f f b b f f . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(princesa, 100, 0)
-tiles.setTilemap(tilemap`level1`)
 scene.cameraFollowSprite(princesa)
 princesa.setPosition(10, 0)
 princesa.ay = 300
 info.setLife(3)
+startLevel()
 game.onUpdate(function () {
     if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile2`)) {
         princesa.setPosition(10, 0)
