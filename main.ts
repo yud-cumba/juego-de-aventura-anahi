@@ -41,9 +41,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f b b f f f . . . . . 
         `)
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
-    game.over(true)
-})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     princesa.setImage(img`
         . . . . . . f f f f 4 4 f . . . 
@@ -63,6 +60,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . f f d 1 d 1 d 1 f f . . 
         . . . . . . f f b b f f . . . . 
         `)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
+    tiles.setTilemap(tilemap`level28`)
 })
 // princesa = tiles.getTilesByType(assets.tile`transparency16`)
 function initializeLevel () {
@@ -216,8 +216,9 @@ princesa.setPosition(10, 0)
 princesa.ay = 300
 info.setLife(3)
 game.onUpdate(function () {
-    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile2`)) {
         princesa.setPosition(10, 0)
         info.changeLifeBy(-1)
+        music.powerDown.play()
     }
 })
