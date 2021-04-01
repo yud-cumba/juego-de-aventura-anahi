@@ -222,3 +222,17 @@ game.onUpdate(function () {
         music.powerDown.play()
     }
 })
+game.onUpdate(function () {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`zombie`)) {
+        princesa.setPosition(10, 0)
+        info.changeLifeBy(-1)
+        music.powerDown.play()
+    }
+})
+game.onUpdate(function () {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile9`)) {
+        princesa.setPosition(10, 0)
+        info.changeLifeBy(-1)
+        music.powerDown.play()
+    }
+})

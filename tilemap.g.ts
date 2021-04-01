@@ -516,10 +516,10 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 2 . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . 2 . 2 2 2 2 . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 2 2 2 . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 . . . 
+. . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 . 2 2 2 2 . . . . . . 
+. . . . . . . . . 2 . . . . . . . . . . . . . . 2 2 2 . . . . . 
+. . . . . . . . 2 2 2 2 2 . . . . . . . . . . . 2 2 2 2 . . . . 
+. . . . . . . 2 2 2 2 2 2 2 . . . . . . . . . . 2 2 2 2 2 . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . 2 2 . . 2 2 2 2 2 2 2 2 2 2 2 
 `, [myTiles.transparency16,myTiles.tile12,myTiles.tile11,myTiles.tile13,sprites.castle.tileDarkGrass2,sprites.castle.tileDarkGrass3,sprites.builtin.forestTiles0,sprites.builtin.forestTiles24,sprites.builtin.forestTiles11,sprites.builtin.forestTiles8], TileScale.Sixteen);
         }
