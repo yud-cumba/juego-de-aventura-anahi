@@ -1,18 +1,3 @@
-function setLevelTileMap () {
-    let level = 0
-    cleargame()
-    if (level == 1) {
-        tiles.setTilemap(tilemap`level5`)
-    } else if (level == 2) {
-    	
-    } else if (level == 3) {
-    	
-    } else if (level == 4) {
-    	
-    } else {
-    	
-    }
-}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (princesa.isHittingTile(CollisionDirection.Bottom)) {
         princesa.vy = -150
@@ -61,13 +46,29 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . f f b b f f . . . . 
         `)
 })
+function startlevel () {
+    if (current_level == 0) {
+        tiles.setTilemap(tilemap`level28`)
+    } else if (current_level == 1) {
+        tiles.setTilemap(tilemap`level29`)
+    } else if (current_level == 2) {
+        tiles.setTilemap(tilemap`level30`)
+    } else if (current_level == 3) {
+    	
+    } else {
+    	
+    }
+    tiles.setTilemap(tilemap`level1`)
+}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
-    tiles.setTilemap(tilemap`level28`)
+    current_level += 1
+    startlevel()
 })
 // princesa = tiles.getTilesByType(assets.tile`transparency16`)
 function initializeLevel () {
     effects.confetti.startScreenEffect()
 }
+let current_level = 0
 let princesa: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
