@@ -48,28 +48,24 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function startlevel () {
     if (current_level == 0) {
-        tiles.setTilemap(tilemap`level28`)
+        tiles.setTilemap(tilemap`level1`)
     } else if (current_level == 1) {
-        tiles.setTilemap(tilemap`level29`)
+        tiles.setTilemap(tilemap`level28`)
     } else if (current_level == 2) {
         tiles.setTilemap(tilemap`level30`)
     } else if (current_level == 3) {
-    	
+        game.over(true)
     } else {
     	
     }
-    tiles.setTilemap(tilemap`level1`)
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
     current_level += 1
     startlevel()
 })
-// princesa = tiles.getTilesByType(assets.tile`transparency16`)
-function initializeLevel () {
-    effects.confetti.startScreenEffect()
-}
 let current_level = 0
 let princesa: Sprite = null
+startlevel()
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -211,11 +207,17 @@ princesa = sprites.create(img`
     . . . . . . f f b b f f . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(princesa, 100, 0)
-tiles.setTilemap(tilemap`level1`)
 scene.cameraFollowSprite(princesa)
 princesa.setPosition(10, 0)
 princesa.ay = 300
 info.setLife(3)
+game.onUpdate(function () {
+    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile9`)) {
+        princesa.setPosition(10, 0)
+        info.changeLifeBy(-1)
+        music.powerDown.play()
+    }
+})
 game.onUpdate(function () {
     if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile2`)) {
         princesa.setPosition(10, 0)
@@ -225,13 +227,6 @@ game.onUpdate(function () {
 })
 game.onUpdate(function () {
     if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`zombie`)) {
-        princesa.setPosition(10, 0)
-        info.changeLifeBy(-1)
-        music.powerDown.play()
-    }
-})
-game.onUpdate(function () {
-    if (princesa.tileKindAt(TileDirection.Bottom, assets.tile`myTile9`)) {
         princesa.setPosition(10, 0)
         info.changeLifeBy(-1)
         music.powerDown.play()
